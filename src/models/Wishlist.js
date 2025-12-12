@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
 const wishlistSchema = new mongoose.Schema({
-    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true, index: true },
-    product: { type: mongoose.Schema.Types.ObjectId, ref: "Product", required: true },
+    user_id: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+    product_id: { type: mongoose.Schema.Types.ObjectId, ref: "Product" }
 }, { timestamps: true });
 
 export default mongoose.model("Wishlist", wishlistSchema);
